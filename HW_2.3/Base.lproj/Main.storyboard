@@ -53,7 +53,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u1-Ih-JOF">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="38"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                        <buttonConfiguration key="configuration" style="plain" title="Login">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -130,7 +130,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTk-s1-PdD">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="84"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="ZdS-OR-snf"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="ZdS-OR-snf"/>
                                             <constraint firstAttribute="height" constant="84" id="ep6-g0-wAw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -162,7 +162,6 @@
                         <viewLayoutGuide key="safeArea" id="Vks-ht-w8i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hdW-PM-scT" firstAttribute="width" secondItem="uNI-kQ-hJn" secondAttribute="height" multiplier="187:448" id="NfT-6G-Mex"/>
                             <constraint firstItem="hdW-PM-scT" firstAttribute="centerX" secondItem="uNI-kQ-hJn" secondAttribute="centerX" id="dyA-rI-9Dp"/>
                             <constraint firstItem="hdW-PM-scT" firstAttribute="centerY" secondItem="uNI-kQ-hJn" secondAttribute="centerY" id="xHO-IB-QMp"/>
                         </constraints>
