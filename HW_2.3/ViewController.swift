@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var usernameTextField: UITextField!
@@ -19,19 +19,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        super .touchesBegan(touches, with: event)
-    }
-    
-    @IBAction func textFieldReturn() {
-        passwordTextField.becomeFirstResponder()
-    }
-    
+
     @IBAction func logInButtonPressed() {
         if usernameTextField.text != trueUserName || passwordTextField.text != truePassword {
             showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
             passwordTextField.text = ""
+        } else {
+            performSegue(withIdentifier: "segue", sender: .none)
         }
     }
     
@@ -55,12 +49,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-extension ViewController {
+extension ViewController: UITextFieldDelegate {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super .touchesBegan(touches, with: event)
+    }
+    
+    @IBAction func textFieldReturn() {
+        passwordTextField.becomeFirstResponder()
+    }
+    
 }
 

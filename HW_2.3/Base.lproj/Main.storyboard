@@ -58,7 +58,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfL-3c-S1T"/>
-                                            <segue destination="rcD-J5-FI1" kind="presentation" id="FqR-h2-IcR"/>
+                                            <segue destination="rcD-J5-FI1" kind="presentation" identifier="segue" id="FqR-h2-IcR"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="VuJ-wa-jhg">
