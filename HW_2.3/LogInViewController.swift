@@ -11,12 +11,12 @@ class LogInViewController: UIViewController {
     
     @IBOutlet var userNameLabel: UILabel!
     
+    var userNameValue: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientBackgroundColor()
-    }
-    func userNameLabelSet() {
-        
+        userNameLabel.text = "Welcome, " + userNameValue + "!"
     }
     
     private func gradientBackgroundColor() {
