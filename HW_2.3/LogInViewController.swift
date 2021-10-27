@@ -8,26 +8,23 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
+    
+    @IBOutlet var userNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        CAGradientLayer()
-
-        // Do any additional setup after loading the view.
+        gradientBackgroundColor()
+    }
+    func userNameLabelSet() {
+        
     }
     
-
-    @IBAction func logOutButtonAction() {
-        dismiss(animated: true)
+    private func gradientBackgroundColor() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [UIColor.systemGray5.cgColor ,UIColor.systemGray2.cgColor, UIColor.yellow.cgColor]
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
